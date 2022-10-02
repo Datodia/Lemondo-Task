@@ -159,7 +159,6 @@ addBtn.forEach(function (e) {
         } else {
             rise.style.display = "none"
         }
-
     });
 });
 
@@ -198,19 +197,31 @@ rise.forEach(function (e) {
 $(document).ready(function () {
     $('#mob-sort').click(function () {
         $('.filter-container .filter').show()
-        $('.filter-container .domains').hide()
+        $('.filter-container .right-div').hide()
         $('header .header .buttons').hide()
     })
 
     $('#mob-sort-exit').click(function () {
         $('.filter-container .filter').hide()
-        $('.filter-container .domains').show()
+        $('.filter-container .right-div').show()
         $('header .header .buttons').show()
+    })
+
+    $('.burger').click(function () {
+        $('nav ').toggle()
+        $('.navbar').show()
+        $('.left').show()
+    })
+
+    $("#mob-sort-2").click(function () {
+        $('.sort').toggle()
+        $('.sorting').show()
+        $('.quantity').hide()
     })
 
     $('#search-btn').click(function () {
         $('.filter-container .filter').hide()
-        $('.filter-container .domains').show()
+        $('.filter-container .right-div').show()
         $('header .header .buttons').show()
     })
 })

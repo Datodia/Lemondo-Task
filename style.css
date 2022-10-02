@@ -24,7 +24,7 @@ header {
 }
 
 header .header {
-    width: 67%;
+    width: 85%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -76,7 +76,7 @@ nav {
 }
 
 nav .navbar {
-    width: 67%;
+    width: 85%;
     display: flex;
     margin: auto;
     justify-content: space-between;
@@ -112,6 +112,10 @@ nav .navbar .right a:hover {
     color: #73a243;
 }
 
+.main-container .sort .how a:hover {
+    color: #73a243;
+}
+
 .main-container .sort .sorting h1:hover {
     color: #73a243;
 }
@@ -123,7 +127,7 @@ nav .navbar .right a:hover {
 
 .main-container .article {
     display: flex;
-    width: 67%;
+    width: 85%;
     height: 180px;
     margin: auto;
     justify-content: center;
@@ -142,7 +146,7 @@ nav .navbar .right a:hover {
 
 .main-container .sort {
     display: flex;
-    width: 67%;
+    width: 85%;
     margin: auto;
     justify-content: space-between;
     margin-top: 40px;
@@ -190,7 +194,7 @@ header .header .buttons button {
 
 
 .main-container .filter-container {
-    width: 67%;
+    width: 85%;
     margin: auto;
     margin-top: 27px;
     display: flex;
@@ -324,8 +328,9 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     justify-content: space-between;
     height: 60px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #F1F1F5;
 }
+
 
 .main-container .filter-container .domains .items:hover {
     background-color: #F5F5F8;

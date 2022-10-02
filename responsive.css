@@ -11,13 +11,14 @@
         gap: 15px;
     }
 
-    .main-container .sort .how {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 1195px) {
     nav .navbar .right {
+        display: none;
+    }
+
+    .main-container .sort .how {
         display: none;
     }
 

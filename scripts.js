@@ -24,25 +24,25 @@ const domainList = [
     {
         domainName: "example1",
         domainExtension: ".ge",
-        price: 299,
+        price: 2999,
         categories: [1, 2]
     },
     {
         domainName: "example2",
         domainExtension: ".com.ge",
-        price: 299,
+        price: 5399,
         categories: [2, 3]
     },
     {
         domainName: "example3",
         domainExtension: ".edu.ge",
-        price: 299,
+        price: 10000,
         categories: [2]
     },
     {
         domainName: "example4",
         domainExtension: ".ge",
-        price: 299,
+        price: 30399,
         categories: [3]
     },
     {
@@ -268,8 +268,8 @@ function addToList(json = []) {
         </div>
         <div class="right">
             <div class="price">
-                <h1>40 000₾</h1>
-                <p>14 258.7 $</p>
+                <h1>${e.price}$</h1>
+                <p>${e.price}₾</p>
             </div>
             <button id="rise" class="rise">
                 <h1>დამატება</h1>

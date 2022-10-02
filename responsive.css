@@ -154,17 +154,17 @@
     }
 
     .main-container .mobile-nav button {
-        width: 220px;
+        width: 168px;
         height: 60px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 40px;
+        gap: 11px;
         background-color: white;
-        border: 1px solid #E5E5ED;
+        border: 1px solid rgb(229, 229, 237);
         border-radius: 10px;
-        font-size: 20px;
-        font-family: 'TKT';
+        font-size: 16px;
+        font-family: TKT;
     }
 
     .main-container .sort .sorting {
@@ -216,7 +216,7 @@
     }
 
     .main-container .filter-container .filter .mob-search button h1 {
-        font-size: 30px;
+        font-size: 27px;
         font-family: 'TKT';
     }
 
@@ -252,8 +252,8 @@
     }
 
     .main-container .mobile-nav button {
-        font-size: 18px;
-        width: 200px;
+        font-size: 16px;
+        width: 161px;
     }
 
     header .header .burger {
@@ -277,6 +277,18 @@
     .main-container .filter-container .domains .items .right {
         padding-right: 10px;
         gap: 16px;
+    }
+
+    .main-container .filter-container .filter .mob-search {
+        height: 62px;
+    }
+
+    .main-container .filter-container .filter .mob-search button h1 {
+        font-size: 21px;
+    }
+
+    .main-container .filter-container .filter {
+        margin-top: -298px;
     }
 
     .main-container .sort .sorting {

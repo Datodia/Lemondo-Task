@@ -69,10 +69,24 @@ let rangeInput = document.querySelectorAll('.range-input input'),
     addBtn = document.querySelectorAll('.add'),
     count = 0,
     rise = document.querySelectorAll(".rise"),
-    addText = document.getElementById('add-text');
+    addText = document.getElementById('add-text'),
+    btnAdd = document.querySelectorAll('#btnAdd');
 
 //Number of domains 
 quantity.innerHTML = domainList.length
+
+
+btnAdd.forEach(function (e) {
+    e.addEventListener('click', function () {
+        let rise = e.previousElementSibling;
+
+        if (rise.style.display === 'none') {
+            rise.style.display = "block"
+        } else {
+            rise.style.display = "none"
+        }
+    })
+})
 
 //when we type something in the search it add this value in the domainList and filter it
 searchInput.addEventListener("input", function () {
@@ -163,35 +177,6 @@ addBtn.forEach(function (e) {
 });
 
 
-//On the click each add button show items number in the basket and also we can remove items from the basket
-rise.forEach(function (e) {
-    e.addEventListener('click', function () {
-        if (e.classList.contains("clicked")) {
-            if (count > 0) {
-                count--
-                basket.innerHTML = count;
-
-            }
-            if (count === 0) {
-                basket.innerHTML = "";
-                basket.classList.remove('basket')
-            }
-
-            e.classList.remove("clicked");
-            e.innerHTML = "დამატება";
-            return;
-        }
-        count++
-        basket.innerHTML = count
-
-        if (count === 1) {
-            basket.classList.add('basket')
-        }
-
-        e.classList.add("clicked");
-        e.innerHTML = 'ამოღება';
-    });
-});
 
 //this jquery add show and hide filter menu on mobile
 $(document).ready(function () {
@@ -274,14 +259,14 @@ function addToList(json = []) {
             <button id="rise" class="rise">
                 <h1>დამატება</h1>
             </button>
-            <button class="add">
+            <button class="add" id="btnAdd">
                 <img src="assets/white-basket.svg" alt="">
             </button>
         </div>
     </div>`
 
-
-    });
+    }
+    );
 
     if (listTable.childNodes.length === 0) {
         //daamate listable.innerHTML rom ver moidzebna
@@ -291,6 +276,51 @@ function addToList(json = []) {
         <p>მითითებული პარამეტრებით დომენების მარკეტში შედეგები ვერ მოიძებნა, შეცვალეთ ძიების პარამეტრები და ცადეთ თავიდან</p>
     </div>`;
     }
+
+    let test = document.querySelectorAll('#btnAdd');
+    let rise = document.querySelectorAll("#rise");
+    test.forEach(function (e) {
+        e.addEventListener('click', function () {
+            let rise = e.previousElementSibling;
+
+            if (rise.style.display === 'block') {
+                rise.style.display = "none"
+            } else {
+                rise.style.display = "block"
+            }
+        })
+    })
+    //On the click each add button show items number in the basket and also we can remove items from the basket
+
+    rise.forEach(function (e) {
+        e.addEventListener('click', function () {
+            if (e.classList.contains("clicked")) {
+                if (count > 0) {
+                    count--
+                    basket.innerHTML = count;
+
+                }
+                if (count === 0) {
+                    basket.innerHTML = "";
+                    basket.classList.remove('basket')
+                }
+
+                e.classList.remove("clicked");
+                e.innerHTML = "დამატება";
+                return;
+            }
+            count++
+            basket.innerHTML = count
+
+            if (count === 1) {
+                basket.classList.add('basket')
+            }
+
+            e.classList.add("clicked");
+            e.innerHTML = 'ამოღება';
+        });
+    });
+
 
 }
 

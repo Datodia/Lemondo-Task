@@ -15,6 +15,18 @@ const categories = [
     {
         name: "მედია",
         id: 3
+    },
+    {
+        name: "მედიცინა",
+        id: 4
+    },
+    {
+        name: "ტექნოლოგიები",
+        id: 5
+    },
+    {
+        name: "თამაშები",
+        id: 6
     }
 ]
 
@@ -50,6 +62,30 @@ const domainList = [
         domainExtension: ".org.ge",
         price: 299,
         categories: [1, 3]
+    },
+    {
+        domainName: "example6",
+        domainExtension: ".com.ge",
+        price: 15000,
+        categories: [4]
+    },
+    {
+        domainName: "example7",
+        domainExtension: ".edu.ge",
+        price: 20000,
+        categories: [5]
+    },
+    {
+        domainName: "example8",
+        domainExtension: ".ge",
+        price: 25000,
+        categories: [6]
+    },
+    {
+        domainName: "example9",
+        domainExtension: ".com.ge",
+        price: 19999,
+        categories: [4, 6]
     }
 ]
 
